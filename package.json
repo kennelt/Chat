@@ -1,5 +1,5 @@
 {
-  "name": "chatbotwebhook",
+  "name": "Chat",
   "version": "1.0.0",
   "description": "Webhook for chat bot",
   "engines": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pallavtrivedi03/NBABotWebhook"
+    "url": "https://github.com/kennelt/Chat"
   },
   "author": "Pallav Trivedi",
   "license": "ISC"
