@@ -1,4 +1,4 @@
 module.exports =
 {
-	dbUrl:"mongodb+srv://admin:admin@cluster0-pjzse.mongodb.net/nba"
+	dbUrl:"mongodb://admin:admin@cluster0-shard-00-00-pjzse.mongodb.net:27017,cluster0-shard-00-01-pjzse.mongodb.net:27017,cluster0-shard-00-02-pjzse.mongodb.net:27017/nba?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
 }
