@@ -12,11 +12,17 @@ exports.processRequest = function(req, res) {
   else if (req.body.result.action == "tell.about")
   {
       //getTeamStats(req,res)
-     return res.json({
-           speech: 'Something went wrong!',
-           displayText: 'Something went wrong!',
-           source: 'team info'
-       });
+	  var query = { name: /^S/ };
+	  dbo.collection("TeamInfo").find(query).toArray(function(err, result) {
+		if (err) throw err;
+		console.log(result);
+		db.close();
+	  });
+	  return res.json({
+              speech: result,
+              displayText: 'Something went wrong!',
+              source: 'team info'
+          });
   }
 };
 
