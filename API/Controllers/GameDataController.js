@@ -147,40 +147,12 @@ function getTeamSchedule(req,res)
     }
   }
   else {
-     	teamToSearch="Sacramento Kings"
-	TeamInfo.findOne({name:teamToSearch},function(err,teamExists)
-      {
-        if (err)
-        {
-          return res.json({
-              speech: 'Something went wrong!',
-              displayText: 'Something went wrong!',
-              source: 'team info'
-          });
-        }
-
-        if (teamExists)
-        {
-          return res.json({
-                speech: teamExists.description,
-                displayText: teamExists.description,
-                source: 'team info'
-            });
-        }
-        else {
-          console.log('team name is '+teamToSearch);
-          return res.json({
-                speech: 'Currently I am not having information about this team',
-                displayText: 'Currently I am not having information about this team',
-                source: 'team info'
-            });
-        }
-      });
-    //return res.json({
-       // speech: 'Cant handle the queries with two teams now. I will update myself',
-        //displayText: 'Cant handle the queries with two teams now. I will update myself',
-        //source: 'game schedule'
-    //});
+     	
+    return res.json({
+        speech: 'Cant handle the queries with two teams now. I will update myself',
+        displayText: 'Cant handle the queries with two teams now. I will update myself',
+        source: 'game schedule'
+    });
   }
 }
   //let reqUrl = encodeURI('http://theapache64.xyz:8080/movie_db/search?keyword=' + movieToSearch);
