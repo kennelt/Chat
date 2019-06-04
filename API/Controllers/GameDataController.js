@@ -11,7 +11,12 @@ exports.processRequest = function(req, res) {
   }
   else if (req.body.result.action == "tell.about")
   {
-      getTeamStats(req,res)
+      //getTeamStats(req,res)
+     return res.json({
+           speech: 'Something went wrong!',
+           displayText: 'Something went wrong!',
+           source: 'team info'
+       });
   }
 };
 
