@@ -13,7 +13,7 @@ exports.processRequest = function(req, res) {
   {
       //getTeamStats(req,res)
 	  var query = { name: /^S/ };
-	  dbo.collection("TeamInfo").find(query).toArray(function(err, result) {
+	  dbo.collection("teaminfos").find(query).toArray(function(err, result) {
 		if (err) throw err;
 		console.log(result);
 		db.close();
