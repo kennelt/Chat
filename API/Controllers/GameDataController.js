@@ -147,7 +147,7 @@ function getTeamSchedule(req,res)
     }
   }
   else {
-     teamToSearch="Sacramento Kings"
+     	teamToSearch="Sacramento Kings"
 	TeamInfo.findOne({name:teamToSearch},function(err,teamExists)
       {
         if (err)
