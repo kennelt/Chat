@@ -12,7 +12,7 @@ exports.processRequest = function(req, res) {
   else if (req.body.result.action == "tell.about")
   {
       //getTeamStats(req,res)
-	  var query = { name: /^S/ };
+	  var query = { name:"Chat"};
 	  dbo.collection("teaminfos").find(query).toArray(function(err, result) {
 		if (err) throw err;
 		console.log(result);
